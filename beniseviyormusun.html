@@ -1,0 +1,22 @@
+<body style="background-color: pink; color: black; text-align: center; margin-top: 20%; font-family: sans-serif;">
+    <h1>Beni seviyor musun?</h1>
+    <button id="evetBtn" style="font-size: 20px; padding: 10px 20px; margin: 10px; cursor: pointer;">Evet</button>
+    <button id="hayirBtn" style="font-size: 20px; padding: 10px 20px; margin: 10px; cursor: pointer;">Hayır</button>
+</body>
+<script>let evetBoyut = 20;
+let hayirBoyut = 20;
+
+document.getElementById("hayirBtn").addEventListener("mouseover", function() {
+    // Evet butonunu devleştir
+    evetBoyut += 15;
+    document.getElementById("evetBtn").style.fontSize = evetBoyut + "px";
+    document.getElementById("evetBtn").style.padding = (evetBoyut/2) + "px " + evetBoyut + "px";
+
+    // Hayır butonunu ez
+    hayirBoyut -= 5;
+    document.getElementById("hayirBtn").style.fontSize = hayirBoyut + "px";
+    document.getElementById("hayirBtn").style.padding = (hayirBoyut/2) + "px " + hayirBoyut + "px";
+}); document.getElementById("evetBtn").addEventListener("click", function() {
+    // Tüm sayfanın İÇ HTML'ini değiştiriyoruz
+    document.body.innerHTML = "<h1 style='font-size: 60px;'>BENDE SENİ ÇOK SEVİYORUM ❤️❤️❤️</h1>";
+});</script>
